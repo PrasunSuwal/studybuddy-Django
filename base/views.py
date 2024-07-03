@@ -267,5 +267,3 @@ def delete(request):
 
 
 
-
-
