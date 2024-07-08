@@ -222,7 +222,7 @@ def isNum(topic):
 
 def editUser(request):
     user = request.user
-    profile = user.profile_set.get()
+    profile = Profile.objects.get(user=user)
     if request.method == "POST":
         if 'image' in request.FILES:
             image = request.FILES.get('image')
@@ -263,6 +263,7 @@ def settings(request):
     
 def delete(request):
     return render(request, "base/delete.html")
+
 
 
 

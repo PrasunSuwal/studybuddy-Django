@@ -20,7 +20,7 @@
         {% if request.user.is_authenticated  %}
         {% comment %} logged in {% endcomment %}
         <div class="header__user">
-          <a href="{% url 'profile' 'sadfsadfsad' %}">
+          <a href="{% url 'profile' user.username %}">
             <div class="avatar avatar--medium active">
               <img src="/media/{{ user.profile.image}}" />
             </div>
